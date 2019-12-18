@@ -8,11 +8,11 @@
     <bean id="happyFortune" class="HappyFortune"/>
     <bean id="veryHappyFortune" class="VeryHappyFortuneService"/>
 
-    <bean id="cricketCoach" class="CricketCoach">
-        <constructor-arg ref="happyFortune"/>
-    </bean>
     <bean id="trackCoach" class="TrackCoach">
         <constructor-arg ref="veryHappyFortune"/>
+    </bean>
+    <bean id="cricketCoach" class="CricketCoach">
+        <constructor-arg ref="happyFortune"/>
     </bean>
     <bean id="footballCoach" class="FootballCoach">
         <property name="fortuneService" ref="happyFortune"/>
