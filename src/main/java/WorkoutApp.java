@@ -13,5 +13,10 @@ public class WorkoutApp {
 
         System.out.println(trackCoach.getWorkout());
         System.out.println(trackCoach.getFortune());
+
+        // setter injection;
+        Coach footballCoach = context.getBean("footballCoach",Coach.class);
+        System.out.println(footballCoach.getWorkout());
+        System.out.println(footballCoach.getFortune());
     }
 }
