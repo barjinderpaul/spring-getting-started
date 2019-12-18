@@ -5,7 +5,14 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="cricketCoach" class="CricketCoach"/>
-    <bean id="trackCoach" class="TrackCoach"/>
+    <bean id="happyFortune" class="HappyFortune"/>
+    <bean id="veryHappyFortune" class="VeryHappyFortuneService"/>
+
+    <bean id="cricketCoach" class="CricketCoach">
+        <constructor-arg ref="happyFortune"/>
+    </bean>
+    <bean id="trackCoach" class="TrackCoach">
+        <constructor-arg ref="veryHappyFortune"/>
+    </bean>
 
 </beans>
