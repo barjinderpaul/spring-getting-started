@@ -1,12 +1,10 @@
 public class CricketCoach implements Coach {
 
-    public CricketCoach() {
-        System.out.println("----- No arg constructor called for the Cricket coach class ---- ");
-    }
+    private String emailAddress;
+    private String team;
 
     FortuneService fortuneService;
     public CricketCoach(FortuneService fortuneService) {
-        System.out.println(";;;;;;;;;;; Arged constructor called for the Cricket coach class");
         this.fortuneService = fortuneService;
     }
 
@@ -18,6 +16,22 @@ public class CricketCoach implements Coach {
     @Override
     public String getFortune() {
         return fortuneService.getFortune();
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
     }
 
 
